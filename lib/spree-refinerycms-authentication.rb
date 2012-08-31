@@ -1,1 +1,1 @@
-require "spree/authentication_helpers"
+require "spree_refinery_authentication/engine"

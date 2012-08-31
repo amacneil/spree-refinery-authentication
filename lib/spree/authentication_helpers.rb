@@ -5,6 +5,9 @@ module Spree
       receiver.send :helper_method, :spree_signup_path
       receiver.send :helper_method, :spree_logout_path
       receiver.send :helper_method, :spree_current_user
+
+      # ensure refinery_user? helper method is always available
+      receiver.send :helper_method, :refinery_user?
     end
 
     def spree_current_user
@@ -24,5 +27,3 @@ module Spree
     end
   end
 end
-
-ApplicationController.send :include, Spree::AuthenticationHelpers
