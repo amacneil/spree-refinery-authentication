@@ -20,7 +20,7 @@ Run bundler, then install Spree
     bundle
     rails g spree:install
     
-Note that the Spree installer will automatically copy a migration from this gem. If you want to copy the migration manually,
+**Note:** The Spree installer will automatically copy and run a migration from this gem. If you want to copy the migration manually,
 you can use the following command:
 
     rake railties:install:migrations FROM=spree_refinery_authentication
