@@ -13,8 +13,10 @@ Create a new RefineryCMS application:
     
 Add Spree and this gem to your Gemfile:
 
-    gem 'spree', '~> 1.2.0'
-    gem 'spree-refinerycms-authentication', :git => 'git://github.com/adrianmacneil/spree-refinery-authentication.git'
+```ruby
+gem 'spree', '~> 1.2.0'
+gem 'spree-refinerycms-authentication', :git => 'git://github.com/adrianmacneil/spree-refinery-authentication.git'
+```
     
 Run bundler, then install Spree
 
@@ -28,11 +30,15 @@ the migration manually, you can use the following command:
     
 Optionally put this line at the top of config/routes.rb to use RefineryCMS for your home page:
 
-    root :to => "refinery/pages#home"
+```ruby
+root :to => "refinery/pages#home"
+```
 
 Start your application, and create a RefineryCMS user. You can then make yourself a Spree admin using the Rails console:
 
-    rails console
-    > Refinery::User.first.spree_roles << Spree::Role.find_or_create_by_name("admin")
+```ruby
+rails console
+> Refinery::User.first.spree_roles << Spree::Role.find_or_create_by_name("admin")
+```
     
 All done! You should now be able to access Refinery at [http://localhost:3000/refinery](http://localhost:3000/refinery) and Spree at [http://localhost:3000/admin](http://localhost:3000/admin).
